@@ -29,7 +29,7 @@ FASTLED_USING_NAMESPACE
 
 #define COLOR_ORDER GRB
 
-#define NUM_LEDS    82 
+#define NUM_LEDS    98 
 #define NUM_LEDS2    76
 
 CRGB leds[NUM_LEDS];
@@ -230,6 +230,7 @@ void sinelon()
   // a colored dot sweeping back and forth, with fading trails
   fadeToBlackBy( leds, NUM_LEDS, 4);
   int pos = beatsin16(13,0,NUM_LEDS - 1);
+  if (pos < 16) pos = 16 - pos; // Flip GPU orientation
   leds[pos] += CHSV( gHue, 255, 192);
   
   fadeToBlackBy( leds2, NUM_LEDS2, 4);
@@ -243,8 +244,10 @@ void sinelon2()
   // a colored dot sweeping back and forth, with fading trails
   fadeToBlackBy( leds, NUM_LEDS, 4);
   int pos = beatsin16(13,0,NUM_LEDS - 1);
+  if (pos < 16) pos = 16 - pos; // Flip GPU orientation
   leds[pos] += CHSV( gHue, 255, 192);
-  pos = NUM_LEDS - pos - 1;
+  pos = NUM_LEDS - pos - 1; 
+  if (pos < 16) pos = 16 - pos; // Flip GPU orientation
   leds[pos] += CHSV( 255 - gHue, 255, 192);
   
   fadeToBlackBy( leds2, NUM_LEDS2, 4);

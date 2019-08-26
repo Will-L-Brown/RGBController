@@ -13,5 +13,10 @@ A small list of various verified parts and their LED type are listed below:
 
 - Corsair HD1x0 fans
     - WS2812B-based custom RGB modules
+	- HD120: 12 LEDS
 - Corsair XD5 Pump and Res Combo
     - WS2812B-based custom RGB modules
+	- 10 LEDS
+- Corsair XG7 GPU Block
+	- WS2812B-based custom RGB modules
+	- 16 LEDS
