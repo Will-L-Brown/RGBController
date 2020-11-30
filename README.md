@@ -32,6 +32,7 @@ This board is in a standard 2.5 inch drive format with mounting holes for easy c
 		- I don't know of a good part number or source for this part. Contact me if you have a part number, or submit a pull request
 	- BOM P/N for Molex power connect is likely not optimal. 
 	- Spacing for aRGB headers may not be optimal for certain devices and may have clearance issues when completely populated
+	- 0.1uF caps C12-16, C27-31 should not be populated. These destroy the signal from the ATMega and were intended for 5V-GND, not Din-GND
 
 # Future Hardware To-Do
 
